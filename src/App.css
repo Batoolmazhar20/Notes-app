@@ -1,0 +1,29 @@
+.custom-outline {
+  position: relative;
+}
+
+.custom-outline::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #00d9ff, #3b82f6, #8b5cf6, #c026ff
+  ) 
+  
+  border-box;
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+
+  mask-composite: exclude;
+
+  pointer-events: none;
+
+  /* NEON GLOW */
+  filter: drop-shadow(0 0 3px #00d9ff)
+          drop-shadow(0 0 7px #3b82f6)
+          drop-shadow(0 0 12px #9333ea)
+          drop-shadow(0 0 20px #c026ff);
+}
